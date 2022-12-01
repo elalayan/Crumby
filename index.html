@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+   <!-- ! так лучше не делать т.к с постороннего адреса медленнее загружается, лучше скачивать шрифты локально и подключать их -->
+   <!-- ! через @font-face -->
+   <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700,800,900&display=swap"
+      rel="stylesheet" /> --> 
+   <!-- ! это тоже ускоряет загрузку шрифтов - предзагрузжает указанный в href шрифт. нужно предзагружать 1-2 самых часто используемых шрифта на странице -->
+   <link rel="preload" href="./fonts/montserrat-v25-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="css/main.css" />
+   <title>Crumby</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <header class="header">
+         <div class="header__container _container">
+            <a href="" class="header__logo"> Crumby </a>
+            <nav class="header__menu menu">
+               <ul class="menu__list">
+                  <li class="menu__item">
+                     <a href="" class="menu__link">Home</a>
+                  </li>
+                  <li class="menu__item">
+                     <a href="indexproduct.html" class="menu__link">Product</a>
+                  </li>
+                  <li class="menu__item">
+                     <a href="" class="menu__link">Pricing</a>
+                  </li>
+                  <li class="menu__item">
+                     <a href="" class="menu__link">Contacts</a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+      </header>
+
+
+
+      <main class="page">
+         <div class="page__main-block main-block">
+            <!-- <div class="main-block__container _container">
+               <div class="main-block__body">
+                  <h1 class="main-block__title">
+                     <div class="main-block__text">
+                     </div>
+
+                     <div class="main-block__buttons">
+                     </div>
+               </div>
+            </div> -->
+            <div class="main-block__image _ibg">
+              <!--! это оптимизация загрузки картинок, загугли squoosh, тег picture и форматы картинок webp, avif  -->
+              <picture>
+                <source srcset="./img/main-page/main_img.webp">
+                <img src="./img/main-page/main_img.jpg" alt="crumby">
+              </picture>
+            </div>
+         </div>
+
+         <section class="page__advantages advantages">
+            <div class="advantages__container _container">
+               <div class="advantages__header header-block">
+                  <h2 class="header-block__title">მიირთვი ქრამბისთან უფრო გემრიელად... 😋</h2>
+
+               </div>
+         </section>
+
+         <section class="page__services services">
+            <div class="services__container _container">
+              <div class="services__item first-item _ibg">
+                <picture>
+                  <source srcset="./img/main-page/Img1.avif">
+                  <source srcset="./img/main-page/Img1.webp">
+                  <img class="services__item" src="./img/main-page/Img1.jpg" alt="crumby">
+                </picture>
+              </div>
+              <div class="services__item third-item _ibg colspan-2">
+                <picture>
+                  <source srcset="./img/main-page/Img3.avif">
+                  <source srcset="./img/main-page/Img3.webp">
+                  <img class="services__item ibg-pos-top" src="./img/main-page/Img3.jpg" alt="crumby">
+                </picture>
+              </div>
+              <div class="services__item second-item _ibg">
+                <picture>
+                  <source srcset="./img/main-page/Img4.avif">
+                  <source srcset="./img/main-page/Img4.webp">
+                  <img class="services__item" src="./img/main-page/Img4.jpg" alt="crumby">
+                </picture>
+              </div>
+            </div>
+         </section>
+
+         <section class="page__whoweare whoweare">
+            <div class="whoweare__container _container">
+               
+               <div class="whoweare__body">
+                  <div class="whoweare__video">
+                     <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fmycrumby%2Fvideos%2F640863763890399%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                  </div>
+                  <div class="whoweare__content">
+                     <div class="whoweare__top">
+                        <h2 class="whoweare__title">ქრამბისთან ერთად ყველაფერი მარტივია ❤️🧑‍🍳</h2>
+                        <div class="whoweare__text">ქრამბი საფანელი - "ოქროსფერი"🟨 <br>
+                           თუ გინდა რომ შენმა კერძმა იხრაშუნოს  მოამზადე ქრამბის საფანელში🧑‍🍳🍗
+                           მომზადების შემდეგ👉
+                           მიხვდი რატო ქვია ოქროსფერი 😊😉</div>
+                     </div>
+                     <div class="whoweare__items">
+                        <div class="whoweare__item item-whoweare">
+                          
+                           
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+  </main>
+
+  <footer class="footer">
+   <div class="footer__top">
+      <div class="footer__main _container">
+         <div class="footer__row">
+            <div class="footer__column">
+               <div class="footer__label">Company Info</div>
+               <div class="footer__menu menu-footer">
+                  <ul class="menu-footer__list">
+                     <li class="menu-footer__item"><a href="" class="menu-footer__link">About Us</a></li>
+                     <li class="menu-footer__item"><a href="" class="menu-footer__link">Carrier</a></li>
+                     <li class="menu-footer__item"><a href="" class="menu-footer__link">We are hiring</a></li>
+                     <li class="menu-footer__item"><a href="" class="menu-footer__link">Blog</a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="footer__column">
+               <div class="footer__label">Legal</div>
+               <div class="footer__menu menu-footer">
+                  <ul class="menu-footer__list">
+                     <li class="menu-footer__item"><a href="" class="menu-footer__link">About Us</a></li>
+                     <li class="menu-footer__item"><a href="" class="menu-footer__link">Carrier</a></li>
+                     <li class="menu-footer__item"><a href="" class="menu-footer__link">We are hiring</a></li>
+                     <li class="menu-footer__item"><a href="" class="menu-footer__link">Blog</a></li>
+                  </ul>
+               </div>
+            </div>
+
+            <div class="footer__column">
+               <div class="footer__label">Get In Touch</div>
+               <div class="footer__contacts contacts-footer">
+                  <a href="tel:4805550103" class="contacts-footer__item contacts-footer__item_phone">+995 577 72 52 22</a>
+                  <a href="" class="contacts-footer__item contacts-footer__item_map">Vazisubani Settlement I Micro-District, Tbilisi</a>
+                  <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRzDDKjVdLxVxWqgNqggrdbNXBVZtQjPSjwCxKtbGCvqThfdhccJCzRTMzFlPmPQtSLVhqzk" class="contacts-footer__item contacts-footer__item_email">crumbygeorgia@gmail.com</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+ 
+</footer>
+   </div>
+   <script src="js/app.js"></script>
+</body>
+
+</html>
