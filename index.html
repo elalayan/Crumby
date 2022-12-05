@@ -11,7 +11,8 @@
       rel="stylesheet" /> --> 
    <!-- ! это тоже ускоряет загрузку шрифтов - предзагрузжает указанный в href шрифт. нужно предзагружать 1-2 самых часто используемых шрифта на странице -->
    <link rel="preload" href="./fonts/montserrat-v25-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
-
+   <link rel="stylesheet" href="main.css" />
+   <link rel="stylesheet" href="swiper/swiper-bundle.css" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <link rel="stylesheet" href="css/main.css" />
    <title>Crumby</title>
@@ -21,7 +22,7 @@
    <div class="wrapper">
       <header class="header">
          <div class="header__container _container">
-            <a href="" class="header__logo"> Crumby </a>
+            <a href="" class="header__logo"> <img class="header_logo _logo" src='/Crumby/img/main-page/logo1.png' alt=''> </a>
             <nav class="header__menu menu">
                <ul class="menu__list">
                   <li class="menu__item">
@@ -30,12 +31,7 @@
                   <li class="menu__item">
                      <a href="indexproduct.html" class="menu__link">Product</a>
                   </li>
-                  <li class="menu__item">
-                     <a href="" class="menu__link">Pricing</a>
-                  </li>
-                  <li class="menu__item">
-                     <a href="" class="menu__link">Contacts</a>
-                  </li>
+                   
                </ul>
             </nav>
          </div>
@@ -124,6 +120,52 @@
             </div>
          </section>
 
+<section class='page_swiper swiper'>
+  <div class='swiper_container _container'>
+    <div class="content">
+
+      <h2 class="whoweare__title">იხილეთ ჩვენი პროდუქცია 🧑‍🍳</h2>
+
+         
+          <div class="image-slider swiper-container">
+            <div class="image-slider__wrapper swiper-wrapper">
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <img class="swiper-lazy" data-src="images/1.jpg" src="dasd.sad" alt="#" />
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <img class="swiper-lazy" data-src="images/2.jpg" src="dasd.sad" alt="#" />
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <img class="swiper-lazy" data-src="images/3.jpg" src="dasd.sad" alt="#" />
+                  <div class="swiper-lazy-preloader"></div>
+                </div>
+              </div>
+             
+              
+            
+              
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+            <!-- <div class="swiper-scrollbar"></div> -->
+          </div>
+
+          
+        </div>
+    </div>
+  </div>
+
+
+</section>
+
   </main>
 
   <footer class="footer">
@@ -167,6 +209,8 @@
  
 </footer>
    </div>
+   <script src="swiper/swiper-bundle.min.js"></script>
+   <script src="main.js"></script>
    <script src="js/app.js"></script>
 </body>
 

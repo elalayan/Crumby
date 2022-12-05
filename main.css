@@ -1,0 +1,208 @@
+/*
+* -------------------------------------------------------------------------------------------- *
+* ====================================  CONNECTING FONTS  ==================================== *
+* -------------------------------------------------------------------------------------------- *
+*/
+
+/*
+* -------------------------------------------------------------------------------------------- *
+* ======================================  RESET STYLES  ====================================== *
+* -------------------------------------------------------------------------------------------- *
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+*:before,
+*:after {
+  position: absolute;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  text-size-adjust: 100%;
+  min-height: 100vh;
+}
+
+body {
+
+}
+
+a:active {
+ 
+}
+
+a,
+a:active,
+a:visited {
+  
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input::ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  margin-left: 7px;
+}
+
+/*
+* -------------------------------------------------------------------------------------------- *
+* ====================================  GENERAL CLASSES  ===================================== *
+* -------------------------------------------------------------------------------------------- *
+*/
+
+.wrapper {
+  
+}
+
+.content {
+  flex: 1 1 auto;
+}
+
+.container {
+
+}
+
+/*
+* -------------------------------------------------------------------------------------------------- *
+* ====================================  MAIN CODE STARTS HERE  ===================================== *
+* -------------------------------------------------------------------------------------------------- *
+*/
+
+/*
+* ----------------------------------------------------------------------------------- *
+* ====================================  header  ===================================== *
+* ----------------------------------------------------------------------------------- *
+*/
+
+body {
+
+}
+
+h1 {
+
+}
+
+.image-slider {
+  padding: 30px 0 70px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-container {
+}
+
+.image-slider__wrapper {
+}
+
+.image-slider__slide {
+  overflow: hidden;
+  /* height: calc((100% - 30px) / 2) !important; */
+}
+
+.image-slider__image {
+
+}
+
+.image-slider .swiper-button-prev:after,
+.image-slider .swiper-button-next:after {
+  font-size: 80px;
+  color: #fff;
+}
+
+.image-slider .swiper-pagination {
+  bottom: 0 !important;
+}
+
+.image-slider .swiper-pagination-fraction {
+  font-size: 20px;
+  color: #fff;
+}
+
+.image-slider .swiper-scrollbar-drag {
+  cursor: pointer;
+  background-color: #7a956b;
+}
+
+.image-slider .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px !important;
+  line-height: 20px;
+  font-size: 16px;
+  background-color: #fff;
+  transition: all 3s ease;
+  color: rgb(12, 109, 135);
+}
+.image-slider .swiper-pagination-bullet-active {
+  
+}
+
+.image-slider .swiper-pagination-bullet-active-main {
+}
+
+img {
+  
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.image-mini-slider img {
+
+}
+
+.image-mini-slider__image {
+  height: 150px !important;
+}
+
+.swiper-slide-thumb-active {
+  transform: scale(1.4) !important;
+}
