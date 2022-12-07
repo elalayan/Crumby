@@ -37,10 +37,10 @@ const sliderBig = new Swiper('.image-slider', {
     onlyInViewport: true, // default. slider keyboard events invoke only when slider is fully visible
   },
 
-  mousewheel: {
-    sensitivity: 1,
-    eventsTarget: '.image-slider', //? if we have many sliders with .image-slider inside, all of them will be scrolled at once so for this option use unique classes or id
-  },
+  // mousewheel: {
+  //   sensitivity: 1,
+  //   eventsTarget: '.image-slider', //? if we have many sliders with .image-slider inside, all of them will be scrolled at once so for this option use unique classes or id
+  // },
 
   // autoHeight: true, // if slidesPerColumn is not 1, should be false
   slidesPerView: 3, // can be float ot int, or 'auto', if auto, slide width should also be specified to auto in css
@@ -48,22 +48,22 @@ const sliderBig = new Swiper('.image-slider', {
   //   rows: 2,
   // },
   watchOverflow: true, // default. if all slides can be placed in container, slider will not be initialized 
-  spaceBetween: 30,
+  spaceBetween: -10,
   slidesPerGroup: 1,
   centeredSlides: true,
-  // initialSlide: 2, // starts from 0, default 0
+  initialSlide: 1, // starts from 0, default 0
   loop: true, // if true, cannot switch slide by click on next/prev button until transition ends
-  freeMode: { // doesnt work well with slideToClickedSlide
-    enabled: true,
-    // momentumBounceRatio: 0,
-    momentumBounce: false, // set to false do fix loop+freeMode behavior when user swipes fast and slider scrolls very fast 
-    //                        and slides are loading late
-    momentumRatio: 1, // also fixes loop+freeMode behavior but a bit. Better in combo with momentumBounce: false
-  },
+  // freeMode: { // doesnt work well with slideToClickedSlide
+  //   enabled: true,
+  //   // momentumBounceRatio: 0,
+  //   momentumBounce: false, // set to false do fix loop+freeMode behavior when user swipes fast and slider scrolls very fast 
+  //   //                        and slides are loading late
+  //   momentumRatio: 1, // also fixes loop+freeMode behavior but a bit. Better in combo with momentumBounce: false
+  // },
   // rewind: true, // should not be used with loop
   autoplay: { // data-swiper-autoplay to slide to set different autoplay duration
     delay: 2500, // default 3000
-    stopOnLastSlide: true, // works if slider is not looped
+    // stopOnLastSlide: true, // works if slider is not looped
     disableOnInteraction: true,
     // pauseOnMouseEnter: true,
   },
@@ -77,7 +77,7 @@ const sliderBig = new Swiper('.image-slider', {
   // flipEffect: {
   //   crossFade: true,
   //   limitRotation: true
-  // }
+  // },
 
   // effect: 'cube', // only with slidesPerView: 1,
   // cubeEffect: {
@@ -91,7 +91,7 @@ const sliderBig = new Swiper('.image-slider', {
   coverflowEffect: {
     slideShadows: true,
     rotate: 20,
-    stretch: 50,
+    stretch: -30,
   },
 
   breakpoints: { // mobile-first. some properties cannot be changed in breakpoints
