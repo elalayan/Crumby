@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-/* //! это тот ресет который я обычно юзаю, там много хуйни так что не вникай */
-
 /*
 * -------------------------------------------------------------------------------------------- *
 * ======================================  RESET STYLES  ====================================== *
@@ -24,6 +22,10 @@
   margin-bottom: 5px;
   margin-bottom: 5px;
   padding-top: 6px;
+}
+
+html {
+  overflow: visible !important;
 }
 
 html,
@@ -168,6 +170,10 @@ fieldset {
   border: none;
 }
 
+.content {
+  flex: 1 1 auto;
+}
+
 /*
 * ====================================  design-specific reset  ==================================== *
 */
@@ -260,9 +266,7 @@ body {
 /* Обнуление */
 
 /* ---------------------------------------------------------------------------- */
-@media(max-width: 34234px) {
-  
-}
+
 ._container {
   max-width: 1400px;
   margin: 0 auto;
@@ -273,7 +277,7 @@ body {
   position: relative;
 }
 
-._ibg img {
+._ibg > img, ._ibg > picture > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -283,7 +287,69 @@ body {
   object-position: 50% 50%;
 }
 
+
+.image-slider {
+  padding: 70px 0 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-slider__slide {
+  overflow: hidden;
+  /* height: calc((100% - 30px) / 2) !important; */
+}
+
+.image-slider .swiper-button-prev:after,
+.image-slider .swiper-button-next:after {
+  font-size: 80px;
+  color: #fff;
+}
+
+.image-slider .swiper-pagination {
+  bottom: 0 !important;
+}
+
+.image-slider .swiper-pagination-fraction {
+  font-size: 20px;
+  color: #fff;
+}
+
+.image-slider .swiper-scrollbar-drag {
+  cursor: pointer;
+  background-color: #7a956b;
+}
+
+.image-slider .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px !important;
+  line-height: 20px;
+  font-size: 16px;
+  background-color: #fff;
+  transition: all 3s ease;
+  color: rgb(12, 109, 135);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.image-mini-slider__image {
+  height: 150px !important;
+}
+
+.swiper-slide-thumb-active {
+  transform: scale(1.4) !important;
+}
+
+
 /* --------------------------------------------------------------------- */
+
+
+
 
 .header-block {
   letter-spacing: 0.2px;
@@ -322,7 +388,7 @@ body {
 .header__logo {
   color: whitesmoke;
   font-weight: 700;
-  
+
   text-shadow: 1px 0 10px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
 }
 
@@ -369,9 +435,167 @@ body {
 }
 
 .main-block__image {
-  /* сделать так чеб картинка занимала ровно 1 экран */
   width: 100vw;
   height: 100vh;
+}
+.product .header {
+  position: relative;
+}
+.product .main-block__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.product .main-block__image img {
+  object-position: 50% 50%;
+}
+.product__description {
+  background-color: #fdefe6;
+  padding-top: 50px;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+.description__title {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+  display: block;
+}
+
+.description__item {
+}
+.description-item {
+  padding-bottom: 25px;
+}
+.description-item__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+.description-item__body {
+  flex: 0 1 65%;
+}
+.description-item__title {
+  font-size: 25px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-align: center;
+}
+.description-item__text {
+  line-height: 1.4;
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+@media (m) {
+
+}
+.description-item__image-container {
+  flex: 1 1 35%;
+  aspect-ratio: 1/ 1;
+  max-width: 35%;
+}
+.description-item__image {
+  /* border-radius: 100% 0% 100% 0% / 100% 0% 100% 0%; */
+  /* clip-path: polygon(99% 10%, 86% 49%, 100% 100%, 22% 100%, 0% 50%, 23% 10%); */
+  clip-path: polygon(99% 5%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 24% 5%);
+}
+
+.description-item--reverse {
+  position: relative;
+}
+.description-item--reverse::before {
+  position: absolute;
+  top: 0;
+  left: -20vw;
+  width: 120vw;
+  height: 100%;
+  background-color: #e0e0e0;
+  content: '';
+}
+.description-item--reverse .description-item__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.description-item--reverse .description-item__inner {
+  flex-direction: row-reverse !important;
+}
+
+.description-item--reverse .description-item__image {
+  clip-path: polygon(72% 9%, 92% 50%, 71% 99%, 0 99%, 20% 50%, 0 9%);
+}
+
+.gallery {
+  padding-bottom: 30px;
+}
+
+.gallery__inner {
+}
+
+.gallery__grid {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
+  gap: 20px;
+}
+
+.gallery__item {
+  aspect-ratio: 3/2;
+}
+
+.gallery__item--horizontal {
+  grid-column: span 2;
+  padding-bottom: calc(33.333% - 7px);
+
+  /* aspect-ratio: 6/2; */
+  aspect-ratio: auto;
+
+}
+.gallery__item--vertical {
+  grid-row: span 2;
+  padding-bottom: calc(133.333% + 20px);
+
+  /* aspect-ratio: 3 / 4; */
+  aspect-ratio: auto;
+}
+
+.gallery__image {
+}
+
+.gallery__item .open-image {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  content: '';
+  z-index: 1;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  opacity: 0;
+}
+
+
+.gallery__item:hover .open-image {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 139, 72, 0.4);
+  opacity: 1;
+}
+
+.open-image img {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
 }
 
 @media (max-width: 424px) {
@@ -413,7 +637,7 @@ body {
 }
 
 .services__item.colspan-2 {
-  grid-row-end: span 2;
+  grid-row: span 2;
   /* //! тут сложно */
   padding-bottom: calc(122% + 30px);
   aspect-ratio: auto;
@@ -423,6 +647,10 @@ body {
 
 .ibg-pos-top.ibg-pos-top {
   object-position: 50% 0%;
+}
+
+.ibg-pos-bottom.ibg-pos-bottom {
+  object-position: 50% 70%;
 }
 
 /* ---------------------------------------------------------- */
@@ -452,13 +680,14 @@ body {
 .whoweare__body {
   display: flex;
   align-items: flex-start;
- 
 }
 
-@media(min-width: 925px) {
+@media (min-width: 925px) {
+
+
+
   .whoweare__body {
     margin-bottom: -60px;
-   
   }
 }
 .whoweare__video {
@@ -494,6 +723,24 @@ body {
   line-height: 142%;
 }
 @media (max-width: 1050px) {
+
+  .description-item__text{
+    font-size: 15px;
+
+  }
+  
+  .description-item__title{
+    font-size: 23px;
+  
+  }
+  .description-item__inner{
+    font-size: 23px;
+ 
+  }
+  .description__title__inner{
+    font-size: 30px;
+  }
+
   .whoweare__text {
     font-size: 18px;
   }
@@ -541,6 +788,25 @@ body {
   }
 }
 @media (max-width: 925px) {
+  .description-item__text{
+    font-size: 13px;
+
+  }
+  
+  .description-item__title{
+    font-size: 22px;
+
+
+  }
+  .description-item__inner{
+    gap:20px;
+    font-size: 22px;
+
+
+  }
+  .description__title__inner{
+    font-size: 30px;
+  }
   .whoweare {
     padding: 50px 0px 50px 0px;
   }
@@ -570,6 +836,23 @@ body {
   }
 }
 @media (max-width: 767px) {
+  .description-item__text{
+    font-size: 12px;
+
+  }
+  
+  .description-item__title{
+    font-size: 21px;
+  
+  }
+  .description-item__inner{
+    gap:15px;
+    font-size: 21px;
+
+  }
+  .description__title__inner{
+    font-size: 30px;
+  }
   .whoweare {
     padding: 20px 0px 50px 0px;
   }

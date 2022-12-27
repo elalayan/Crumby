@@ -11,7 +11,7 @@
       rel="stylesheet" /> --> 
    <!-- ! это тоже ускоряет загрузку шрифтов - предзагрузжает указанный в href шрифт. нужно предзагружать 1-2 самых часто используемых шрифта на странице -->
    <link rel="preload" href="./fonts/montserrat-v25-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
-   <link rel="stylesheet" href="main.css" />
+   <!-- <link rel="stylesheet" href="main.css" /> -->
    <link rel="stylesheet" href="swiper/swiper-bundle.css" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <link rel="stylesheet" href="css/main.css" />
@@ -26,10 +26,10 @@
             <nav class="header__menu menu">
                <ul class="menu__list">
                   <li class="menu__item">
-                     <a href="" class="menu__link">Home</a>
+                     <a href="index.html" class="menu__link">Home</a>
                   </li>
                   <li class="menu__item">
-                     <a href="indexproduct.html" class="menu__link">Product</a>
+                     <a href="Product.html" class="menu__link">Product</a>
                   </li>
                    
                </ul>
@@ -41,16 +41,6 @@
 
       <main class="page">
          <div class="page__main-block main-block">
-            <!-- <div class="main-block__container _container">
-               <div class="main-block__body">
-                  <h1 class="main-block__title">
-                     <div class="main-block__text">
-                     </div>
-
-                     <div class="main-block__buttons">
-                     </div>
-               </div>
-            </div> -->
             <div class="main-block__image _ibg">
               <!--! это оптимизация загрузки картинок, загугли squoosh, тег picture и форматы картинок webp, avif  -->
               <picture>
@@ -59,6 +49,52 @@
               </picture>
             </div>
          </div>
+
+         <section class='page_swiper swiper'>
+          <div class='swiper_container _container'>
+            <div class="content">
+        
+            
+        
+                 
+                  <div class="image-slider swiper-container">
+                    <div class="image-slider__wrapper swiper-wrapper">
+                      <div class="image-slider__slide swiper-slide">
+                        <div class="image-slider__image">
+                          <img class="swiper-lazy" data-src="./images/1.jpg" src="dasd.sad" alt="#" />
+                          <div class="swiper-lazy-preloader"></div>
+                        </div>
+                      </div>
+                      <div class="image-slider__slide swiper-slide">
+                        <div class="image-slider__image">
+                          <img class="swiper-lazy" data-src="images/2.jpg" src="dasd.sad" alt="#" />
+                          <div class="swiper-lazy-preloader"></div>
+                        </div>
+                      </div>
+                      <div class="image-slider__slide swiper-slide">
+                        <div class="image-slider__image">
+                          <img class="swiper-lazy" data-src="images/3.jpg" src="dasd.sad" alt="#" />
+                          <div class="swiper-lazy-preloader"></div>
+                        </div>
+                      </div>
+                     
+                      
+                    
+                      
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-pagination"></div>
+                    <!-- <div class="swiper-scrollbar"></div> -->
+                  </div>
+        
+                  
+                </div>
+            </div>
+          </div>
+        
+        
+        </section>
 
          <section class="page__advantages advantages">
             <div class="advantages__container _container">
@@ -74,21 +110,21 @@
                 <picture>
                   <source srcset="./img/main-page/Img1.avif">
                   <source srcset="./img/main-page/Img1.webp">
-                  <img class="services__item" src="./img/main-page/Img1.jpg" alt="crumby">
+                  <img class="services__image" src="./img/main-page/Img1.jpg" alt="crumby">
                 </picture>
               </div>
               <div class="services__item third-item _ibg colspan-2">
                 <picture>
                   <source srcset="./img/main-page/Img3.avif">
                   <source srcset="./img/main-page/Img3.webp">
-                  <img class="services__item ibg-pos-top" src="./img/main-page/Img3.jpg" alt="crumby">
+                  <img class="services__image ibg-pos-top" src="./img/main-page/Img3.jpg" alt="crumby">
                 </picture>
               </div>
               <div class="services__item second-item _ibg">
                 <picture>
                   <source srcset="./img/main-page/Img4.avif">
                   <source srcset="./img/main-page/Img4.webp">
-                  <img class="services__item" src="./img/main-page/Img4.jpg" alt="crumby">
+                  <img class="services__image" src="./img/main-page/Img4.jpg" alt="crumby">
                 </picture>
               </div>
             </div>
@@ -120,51 +156,7 @@
             </div>
          </section>
 
-<section class='page_swiper swiper'>
-  <div class='swiper_container _container'>
-    <div class="content">
 
-      <h2 class="whoweare__title">იხილეთ ჩვენი პროდუქცია 🧑‍🍳</h2>
-
-         
-          <div class="image-slider swiper-container">
-            <div class="image-slider__wrapper swiper-wrapper">
-              <div class="image-slider__slide swiper-slide">
-                <div class="image-slider__image">
-                  <img class="swiper-lazy" data-src="images/1.jpg" src="dasd.sad" alt="#" />
-                  <div class="swiper-lazy-preloader"></div>
-                </div>
-              </div>
-              <div class="image-slider__slide swiper-slide">
-                <div class="image-slider__image">
-                  <img class="swiper-lazy" data-src="images/2.jpg" src="dasd.sad" alt="#" />
-                  <div class="swiper-lazy-preloader"></div>
-                </div>
-              </div>
-              <div class="image-slider__slide swiper-slide">
-                <div class="image-slider__image">
-                  <img class="swiper-lazy" data-src="images/3.jpg" src="dasd.sad" alt="#" />
-                  <div class="swiper-lazy-preloader"></div>
-                </div>
-              </div>
-             
-              
-            
-              
-            </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-pagination"></div>
-            <!-- <div class="swiper-scrollbar"></div> -->
-          </div>
-
-          
-        </div>
-    </div>
-  </div>
-
-
-</section>
 
   </main>
 
@@ -200,7 +192,7 @@
                <div class="footer__contacts contacts-footer">
                   <a href="tel:4805550103" class="contacts-footer__item contacts-footer__item_phone">+995 577 72 52 22</a>
                   <a href="" class="contacts-footer__item contacts-footer__item_map">Vazisubani Settlement I Micro-District, Tbilisi</a>
-                  <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRzDDKjVdLxVxWqgNqggrdbNXBVZtQjPSjwCxKtbGCvqThfdhccJCzRTMzFlPmPQtSLVhqzk" class="contacts-footer__item contacts-footer__item_email">crumbygeorgia@gmail.com</a>
+                  <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRzDDKjVdLxVxWqgNqggrdbNXBVZtQjPSjwCxKtbGCvqThfdhccJCzRTMzFlPmPQtSLVhqzk" class="contacts-footer__item contacts-footer__item_email">crumby.geo@gmail.com</a>
                </div>
             </div>
          </div>

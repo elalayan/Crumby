@@ -62,12 +62,12 @@ const sliderBig = new Swiper('.image-slider', {
   // },
   // rewind: true, // should not be used with loop
   autoplay: { // data-swiper-autoplay to slide to set different autoplay duration
-    delay: 2500, // default 3000
+    delay: 2700, // default 3000
     // stopOnLastSlide: true, // works if slider is not looped
     disableOnInteraction: true,
     // pauseOnMouseEnter: true,
   },
-  speed: 500, // default 300
+  speed: 900, // default 300
   // effect: 'fade', // only with slidesPerView: 1,
   // fadeEffect: {
   //   crossFade: true,
