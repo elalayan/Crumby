@@ -5,13 +5,7 @@
    <meta charset="UTF-8" />
    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-   <!-- ! так лучше не делать т.к с постороннего адреса медленнее загружается, лучше скачивать шрифты локально и подключать их -->
-   <!-- ! через @font-face -->
-   <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700,800,900&display=swap"
-      rel="stylesheet" /> --> 
-   <!-- ! это тоже ускоряет загрузку шрифтов - предзагрузжает указанный в href шрифт. нужно предзагружать 1-2 самых часто используемых шрифта на странице -->
    <link rel="preload" href="./fonts/montserrat-v25-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
-   <!-- <link rel="stylesheet" href="main.css" /> -->
    <link rel="stylesheet" href="swiper/swiper-bundle.css" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <link rel="stylesheet" href="css/main.css" />
@@ -24,9 +18,12 @@
          <div class="header__container _container">
             <a href="" class="header__logo"> <img class="header_logo _logo" src='img/main-page/logo1.png' alt=''></a>
             <nav class="header__menu menu">
+              
                <ul class="menu__list">
+                
                   <li class="menu__item">
-                     <a href="index.html" class="menu__link">Home</a>
+                    
+                     <a href="index.html" class="menu__link"><div id='marker'></div>Home</a>
                   </li>
                   <li class="menu__item">
                      <a href="Product.html" class="menu__link">Product</a>
@@ -42,7 +39,6 @@
       <main class="page">
          <div class="page__main-block main-block">
             <div class="main-block__image _ibg">
-              <!--! это оптимизация загрузки картинок, загугли squoosh, тег picture и форматы картинок webp, avif  -->
               <picture>
                 <source srcset="./img/main-page/main_img.webp">
                 <img src="./img/main-page/main_img.jpg" alt="crumby">
@@ -85,7 +81,6 @@
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-pagination"></div>
-                    <!-- <div class="swiper-scrollbar"></div> -->
                   </div>
         
                   
@@ -201,6 +196,7 @@
  
 </footer>
    </div>
+   <script src="js/header.js"></script>
    <script src="swiper/swiper-bundle.min.js"></script>
    <script src="main.js"></script>
    <script src="js/app.js"></script>
